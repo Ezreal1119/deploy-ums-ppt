@@ -289,7 +289,7 @@
   .frame-img.swiss-lined{border-top:2px solid var(--accent)}
 
   .image-hero-body{
-    display:grid;grid-template-columns:6fr 6fr;gap:3vw;
+    display:grid;grid-template-columns:5fr 7fr;gap:4vw;
     padding:6.6vh 5vw 4.4vh;flex:1;align-content:start
   }
   .image-hero-stats{
@@ -492,7 +492,7 @@
     margin-bottom:var(--sp-7);
   }
   .slide.compact-top .duo-compare{
-    margin-top:2vh!important;
+    margin-top:1vh!important;
     padding-bottom:2vh;
   }
   .slide.compact-top .grid-4{
@@ -558,7 +558,7 @@
     flex:1;align-items:stretch;margin-top:8vh
   }
   .duo-compare .vrule{background:var(--grey-2);width:1px;align-self:stretch}
-  .duo-compare .col{display:flex;flex-direction:column;gap:1.6vh;padding:0 .4vw}
+  .duo-compare .col{display:flex;flex-direction:column;gap:1vh;padding:0 .4vw}
   .duo-compare .col-tag{
     font-family:var(--mono);font-size:max(10px,.74vw);
     letter-spacing:.22em;text-transform:uppercase;
@@ -579,9 +579,42 @@
     font-size:max(13px,1.04vw);line-height:1.55;opacity:.78;
     max-width:30vw
   }
+  .duo-compare-grid{
+    display:grid;
+    grid-template-columns:1fr 1px 1fr;
+    gap:0 3.4vw;
+    align-items:stretch
+  }
+  .duo-compare-grid .dc-col{
+    display:flex;
+    flex-direction:column;
+    gap:1.2vh
+  }
+  .duo-compare-grid .vrule{
+    align-self:stretch
+  }
+  .duo-compare-grid .col-desc{
+    flex:1
+  }
+  .duo-compare.duo-compare-grid .col-list{
+    margin-top:.5vh;
+    padding-top:.5vh;
+    border-top:1px solid var(--grey-2)
+  }
+  .slide.compact-top.tight-s08 .canvas-card{
+    gap:0;
+    padding:5vh 5vw 4vh
+  }
+  .slide.compact-top.tight-s08 .canvas-card .chrome-min{
+    margin-bottom:1vh
+  }
+  .slide.compact-top .duo-compare-grid{
+    margin-top:0!important;
+    padding-bottom:0
+  }
   .duo-compare .col-list{
     list-style:none;display:flex;flex-direction:column;gap:1vh;
-    margin-top:auto;padding-top:2vh;border-top:1px solid var(--grey-2)
+    margin-top:1vh;padding-top:1vh;border-top:1px solid var(--grey-2)
   }
   .duo-compare .col-list li{
     font-family:var(--sans),var(--sans-zh);
@@ -722,7 +755,7 @@
       </div>
     </div>
     <div data-anim="kpi" class="image-hero-body">
-      <div style="max-width:48ch;display:flex;flex-direction:column;gap:2vh;color:var(--text-primary)">
+      <div style="display:flex;flex-direction:column;gap:2vh;color:var(--text-primary)">
         <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(3.9vw,6.4vh);line-height:1;letter-spacing:-.035em">Full Life-Cycle<br>Device Management</h2>
         <div style="font-family:var(--sans),var(--sans-zh);font-size:max(15px,1.22vw);line-height:1.48;font-weight:300;letter-spacing:-.005em">
           UMS centralizes registration, configuration, deployment, monitoring, compliance, wipe, and reuse. One platform lowers O&amp;M cost and keeps every device under control.
@@ -766,21 +799,21 @@
      Slide 03 · Deployment · S08 Duo Compare
      data-layout="S08"
      ================================================================ -->
-<section class="slide compact-top" data-animate="duo-mirror" data-layout="S08">
+<section class="slide compact-top tight-s08" data-animate="duo-mirror" data-layout="S08">
   <div class="canvas-card">
     <div class="chrome-min">
       <div class="l">DEPLOYMENT</div>
       <div class="r">03 / 14</div>
     </div>
 
-    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr;gap:2vh">
-      <div data-anim="head" style="display:flex;flex-direction:column;gap:1.4vh">
+    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto auto;gap:2.5vh">
+      <div data-anim="head" style="display:flex;flex-direction:column;gap:0.5vh">
         <div class="t-meta" style="color:var(--accent)">FLEXIBLE DEPLOYMENT</div>
-        <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(6vw,10.8vh);line-height:.96;letter-spacing:-.035em">Two deployment options<br>to meet diverse enterprise needs</h2>
+        <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(6vw,10.8vh);line-height:.96;letter-spacing:-.035em">Two deployment options</h2>
       </div>
 
-      <div class="duo-compare" data-anim="compare" style="margin-top:4vh">
-        <div class="col" data-anim="left-col">
+      <div class="duo-compare duo-compare-grid" data-anim="compare">
+        <div class="dc-col" data-anim="left-col">
           <div class="col-tag"><span class="num">01</span> CLOUD</div>
           <div class="col-ttl">Public Cloud</div>
           <div class="col-desc">Connect devices without building servers. UMS cloud provides secure access over mobile networks or Wi-Fi, with the same core management capabilities.</div>
@@ -794,7 +827,7 @@
 
         <div class="vrule" data-anim="vline"></div>
 
-        <div class="col" data-anim="right-col">
+        <div class="dc-col" data-anim="right-col">
           <div class="col-tag"><span class="num">02</span> PRIVATE</div>
           <div class="col-ttl">Private Deployment</div>
           <div class="col-desc">Deploy UMS inside the enterprise intranet. Data stays under customer control for strict security and compliance needs.</div>
@@ -824,7 +857,7 @@
     <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr;gap:2vh">
       <div data-anim="head" style="display:flex;flex-direction:column;gap:1.4vh">
         <div class="t-meta" style="color:var(--accent)">PAIN POINTS · Four Major Challenges</div>
-        <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(5.6vw,10vh);line-height:.96;letter-spacing:-.035em">Core Challenges<br>in Enterprise Device Management</h2>
+        <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(5.6vw,10vh);line-height:.96;letter-spacing:-.035em">Pain Points in Device Management</h2>
       </div>
 
       <div class="grid-4" data-anim="cards" style="margin-top:1vh">
